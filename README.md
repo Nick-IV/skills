@@ -62,7 +62,8 @@ letta/                   # Letta product ecosystem
 ├── navigating-chatgpt-history/ # Navigate archived ChatGPT/Claude exports on demand without full ingestion
 ├── letta-api-client/    # Building apps with Letta SDK (Python/TypeScript)
 ├── letta-configuration/ # Model and provider configuration
-└── letta-filesystem-to-memfs/ # Deprecated Filesystem to MemFS/QMD migration
+├── letta-filesystem-to-memfs/ # Deprecated Filesystem to MemFS/QMD migration
+└── setting-profile-images/ # Set Letta Desktop agent profile images
 
 tools/                       # General tool integrations
 ├── 1password/               # 1Password CLI integration
@@ -117,6 +118,7 @@ meta/                        # Skills about the skill system
 - **letta-api-client** - Building applications with the Letta API using the Python and TypeScript SDKs (agents, tools, memory, multi-user patterns)
 - **letta-configuration** - Configure LLM models and providers for Letta agents and servers
 - **letta-filesystem-to-memfs** - Migrate deprecated Letta Filesystem folders/files to MemFS markdown corpora with chunking, lexical search, and QMD semantic search
+- **setting-profile-images** - Set Letta Desktop and Letta Code agent profile images by writing `profile.png` into MemFS
 
 ### Tools
 
