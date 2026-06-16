@@ -54,7 +54,6 @@ Skills are organized into practical, flat categories:
 ```
 letta/                   # Letta product ecosystem
 ├── agent-development/   # Agent design and architecture
-├── compaction-prompts/  # Configure agent compaction prompts and summaries
 ├── conversations/       # Conversation management
 ├── creating-letta-code-channels/ # Letta Code channel/plugin development
 ├── fleet-management/    # Managing multiple agents
@@ -63,6 +62,7 @@ letta/                   # Letta product ecosystem
 ├── letta-api-client/    # Building apps with Letta SDK (Python/TypeScript)
 ├── letta-configuration/ # Model and provider configuration
 ├── letta-filesystem-to-memfs/ # Deprecated Filesystem to MemFS/QMD migration
+├── self-configuration/ # Agents changing their own model/context/system/compaction settings
 └── setting-profile-images/ # Set Letta Desktop agent profile images
 
 tools/                       # General tool integrations
@@ -109,7 +109,6 @@ meta/                        # Skills about the skill system
 ### Letta
 
 - **agent-development** - Comprehensive guide for designing and building Letta agents (architecture selection, memory design, model selection, tool configuration)
-- **compaction-prompts** - Configure Letta agent compaction settings and custom summarization prompts
 - **conversations** - Managing agent conversations and message history
 - **creating-letta-code-channels** - Building and debugging Letta Code channel adapters and dynamic user channel plugins
 - **fleet-management** - Managing and orchestrating multiple Letta agents
@@ -118,6 +117,7 @@ meta/                        # Skills about the skill system
 - **letta-api-client** - Building applications with the Letta API using the Python and TypeScript SDKs (agents, tools, memory, multi-user patterns)
 - **letta-configuration** - Configure LLM models and providers for Letta agents and servers
 - **letta-filesystem-to-memfs** - Migrate deprecated Letta Filesystem folders/files to MemFS markdown corpora with chunking, lexical search, and QMD semantic search
+- **self-configuration** - Letta agents changing their own model, context window, system prompt, reasoning effort, and compaction settings
 - **setting-profile-images** - Set Letta Desktop and Letta Code agent profile images by writing `profile.png` into MemFS
 
 ### Tools
