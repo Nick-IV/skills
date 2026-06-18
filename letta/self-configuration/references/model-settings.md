@@ -50,5 +50,6 @@ Reasoning/effort values are provider-dependent. Common OpenAI values are `none`,
 ## Common failure modes
 
 - `model_settings` is usually replacement-style. Fetch the current object first and preserve fields you still need.
+- `PATCH` acceptance does not guarantee runtime model availability. A model handle can pass API shape validation but still fail when the next generation resolves providers/routes. Test new handles conversation-scoped before changing agent defaults.
 - Do not send OpenAI `reasoning.reasoning_effort` to Anthropic models.
 - For agent responses, verify effective context at `llm_config.context_window`; `context_window_limit` may be null or normalized in the response.

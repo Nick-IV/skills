@@ -108,6 +108,20 @@ curl -sS -X PATCH "$BASE_URL/v1/conversations/$CONVERSATION_ID" \
   }'
 ```
 
+### Safe conversation-scoped model test
+
+A successful `PATCH` means the API accepted the configuration shape. It does **not** always prove the selected model handle can generate at runtime for the current server, provider, account, or routing configuration. The first actual model call may still fail with a resolver/provider error.
+
+For model experiments, prefer this bounded recipe:
+
+1. Save or inspect the current agent/conversation configuration.
+2. Patch the **current conversation**, not persistent agent defaults.
+3. Verify the response or re-fetch the conversation to confirm the config changed.
+4. Run a tiny low-risk runtime test in the same conversation.
+5. If the runtime test fails, revert the conversation to the saved known-good model/settings.
+
+This keeps failed model-handle experiments from damaging the agent's persistent continuity or requiring the user to repair global defaults.
+
 ### System prompt replacement
 
 Only use `system` when the user explicitly asks to change the persistent system prompt. It is a full replacement, not an append.
